@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harta</title>
+  <link rel="stylesheet" type="text/css" href="style_quizz.css" />
+</head>
+<body onload="initMap()">
+  <a href="http://127.0.0.1:5501/main.html"><h1>VISIT ROMANIA</h1></a>
+  <form>
+    <label for="start">Punct de plecare:</label>
+    <input type="text" id="start" name="start" required>
+    
+    <label for="end">Punct de sosire:</label>
+    <input type="text" id="end" name="end" required>
+  
+    <fieldset>
+      <legend>Opriri:</legend>
+      <div class="stop">
+        <label for="stop1">Stop 1:</label>
+        <input type="text" id="stop1" name="stop1">
+        <label for="duration1">Duration (in minutes):</label>
+        <input type="number" id="duration1" name="duration1" min="0" value="0">
+      </div>
+    </fieldset>
+  
+    <label for="travelMode">Alege modul de a calatori:</label>
+    <select id="travelMode">
+      <option value="DRIVING">Masina</option>
+      <option value="TRANSIT">Tranzit</option>
+    </select>
+    
+    <button type="submit">Calculeaza ruta</button>
+  </form>
+  <button id="add-stop" type="button">Adauga o oprire</button>
+
+  <div id="map"></div>
+  <div id="directions-panel"></div>
+  <div id="route-info"></div>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmsb6lNTtDfwybsoETZn4i5k1ef1UaQLk&callback=initMap" async defer></script>
+  <script src="app.js"></script>
+  
+  <script>
+    var stopCount = 1;
+    var addStopButton = document.getElementById("add-stop");
+    addStopButton.addEventListener("click", function() {
+      stopCount++;
+      var fieldset = document.querySelector("fieldset");
+      var newStopDiv = document.createElement("div");
+      newStopDiv.className = "stop";
+      var newStopLabel = document.createElement("label");
+      newStopLabel.htmlFor = "stop" + stopCount;
+      newStopLabel.textContent = "Stop " + stopCount + ":";
+      var newStopInput = document.createElement("input");
+      newStopInput.type = "text";
+      newStopInput.id = "stop" + stopCount;
+      newStopInput.name = "stop" + stopCount;
+      var newDurationLabel = document.createElement("label");
+      newDurationLabel.htmlFor = "duration" + stopCount;
+      newDurationLabel.textContent = "Duration (in minutes):";
+      var newDurationInput = document.createElement("input");
+      newDurationInput.type = "number";
+      newDurationInput.id = "duration" + stopCount;
+      newDurationInput.name = "duration" + stopCount;
+      newDurationInput.min = "0";
+      newDurationInput.value = "0";
+      newStopDiv.appendChild(newStopLabel);
+      newStopDiv.appendChild(newStopInput);
+      newStopDiv.appendChild(newDurationLabel);
+      newStopDiv.appendChild(newDurationInput);
+      fieldset.appendChild(newStopDiv);
+    });
+  </script>
+</body>
+</html>

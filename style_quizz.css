@@ -1,0 +1,161 @@
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background: linear-gradient(#3fa4d3,#2cb650);
+
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+form {
+  margin-bottom: 20px;
+  width: 35%;
+  float: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  margin-bottom: 40px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stop {
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+button[type="submit"], button[type="button"] {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+  background-color: #444;
+}
+
+
+#map {
+  height: 70vh;
+  width: 50%;
+  float: right;
+}
+form, #map {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+#directions-panel {
+  margin-bottom: 40px;
+  max-height: 620px;
+  overflow: auto;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+label[for="travelMode"] {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#travelMode {
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#travelMode option {
+  background-color: #f2f2f2;
+  color: #333;
+}
+a {
+  text-decoration: none; 
+  color: #333; 
+}
+
+a:hover {
+  color: #666;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0; 
+}
+a
+{
+    color: white;
+    font-weight:700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+  
+  

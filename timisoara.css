@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+ position:relative;
+
+}
+body
+{ min-height: 100vh;
+    background: url('map_of_Timisoara.jpg');
+    background-repeat: no-repeat;
+    background-size: 2600px 1370px;
+    overflow-x: hidden;
+}
+header
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding: 30px 100px;
+display: flex;
+justify-content: space-between;
+align-items:center;
+z-index: 10000;
+
+}
+header .logo
+{
+    color: white;
+    font-weight:700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul
+{
+display:flex;
+justify-content: center;
+align-items: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+text-decoration: none;
+padding: 6px 15px;
+color: white;
+border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: white;
+    color: #2b1055;
+}
+
+
+
+
+.imgArea{
+    position:absolute;
+    align-items:center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: red;
+    object-fit: cover;
+    right: 0px;
+}
+
+button{
+    position: absolute;
+list-style: none;
+justify-content: space-between;
+align-items:center;
+z-index: 10000;
+display:flex;
+
+}
+button .victoriei{
+   position:absolute;
+    margin-top: 1160px;
+    margin-left: 1020px;
+    transition: transform .2s;
+    
+}
+button .victoriei:hover{
+     transform:scale(3.5);
+     z-index:10000;
+}
+button .libertatii{
+    position:absolute;
+     margin-top: 1000px;
+     margin-left: 1020px;
+     transition: transform .2s;
+     
+ }
+ button .libertatii:hover{
+      transform:scale(5.5);
+      z-index:10000;
+ }
+
+ button .unirii{
+    position:absolute;
+     margin-top: 1140px;
+     margin-left: 1115px;
+     transition: transform .2s;
+   
+     
+ }
+ button .unirii:hover{
+      transform:scale(5.5);
+      z-index:10000;
+ }
+ button .traian{
+    position:absolute;
+     margin-top: 1080px;
+     margin-left: 1265px;
+     transition: transform .2s;
+   
+     
+ }
+ button .traian:hover{
+      transform:scale(3.5);
+      z-index:10000;
+ }
